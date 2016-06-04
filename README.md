@@ -1,5 +1,7 @@
 # aurelia-piwik
 
+
+[![npm Version](https://img.shields.io/npm/v/aurelia-piwik.svg)](https://www.npmjs.com/package/aurelia-piwik)
 [![Join the chat at https://gitter.im/aurelia/discuss](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/aurelia/discuss?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 This plugin is aimed to log page visit with [Piwik](http://piwik.org) on an [Aurelia](http://aurelia.io) SPA. By default Piwik will only log the page on which the user arrived. All the other navigations are not logged since for Piwik the user never changed page. To log all the other page, you must manually call the Piwik tracking code `window._paq.push(['trackPageView', location.pathname]);` when the router change page in your SPA. To do this, this plugin rely on the `router:navigation:success` provided by Aurelia's router.
