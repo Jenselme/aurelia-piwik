@@ -16,10 +16,10 @@ System.register(['aurelia-dependency-injection', 'aurelia-event-aggregator'], fu
                 var ea = container.get(EventAggregator);
                 var firstPage = true;
 
-                if (window['_paq']) {
+                if (window._paq) {
                     ea.subscribe('router:navigation:success', function () {
                         if (!firstPage) {
-                            _paq.push(['trackPageView', location.pathname]);
+                            window._paq.push(['trackPageView', location.pathname]);
                         } else {
                             firstPage = false;
                         }

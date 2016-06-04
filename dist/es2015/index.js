@@ -6,10 +6,10 @@ export function configure(config) {
     let ea = container.get(EventAggregator);
     let firstPage = true;
 
-    if (window['_paq']) {
+    if (window._paq) {
         ea.subscribe('router:navigation:success', () => {
             if (!firstPage) {
-                _paq.push(['trackPageView', location.pathname]);
+                window._paq.push(['trackPageView', location.pathname]);
             } else {
                 firstPage = false;
             }

@@ -10,10 +10,10 @@ define(['exports', 'aurelia-dependency-injection', 'aurelia-event-aggregator'], 
         var ea = container.get(_aureliaEventAggregator.EventAggregator);
         var firstPage = true;
 
-        if (window['_paq']) {
+        if (window._paq) {
             ea.subscribe('router:navigation:success', function () {
                 if (!firstPage) {
-                    _paq.push(['trackPageView', location.pathname]);
+                    window._paq.push(['trackPageView', location.pathname]);
                 } else {
                     firstPage = false;
                 }
