@@ -12,13 +12,17 @@ System.register(['aurelia-dependency-injection', 'aurelia-event-aggregator'], fu
         }],
         execute: function () {
             function configure(config) {
-                console.log(Container);
                 var container = Container.instance;
                 var ea = container.get(EventAggregator);
+                var firstPage = true;
 
                 if (window['_paq']) {
                     ea.subscribe('router:navigation:success', function () {
-                        _paq.push(['trackPageView', location.pathname]);
+                        if (!firstPage) {
+                            _paq.push(['trackPageView', location.pathname]);
+                        } else {
+                            firstPage = false;
+                        }
                     });
                 } else {
                     console.warn('piwik module is loaded but no piwik _paq object was found');
