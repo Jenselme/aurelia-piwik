@@ -1,8 +1,8 @@
 import { Container } from 'aurelia-dependency-injection';
 import { EventAggregator } from 'aurelia-event-aggregator';
 
-
 export function configure(config) {
+    console.log(Container);
     let container = Container.instance;
     let ea = container.get(EventAggregator);
 

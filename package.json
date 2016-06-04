@@ -1,22 +1,23 @@
 {
-  "name": "aurelia-skeleton-plugin",
-  "version": "1.0.0-beta.1.1.0",
-  "description": "A starter kit for building an Aurelia plugin.",
+  "name": "aurelia-piwik",
+  "version": "0.1.0",
+  "description": "Plugin to have analytics with piwik on an Aurelia SPA",
   "keywords": [
     "aurelia",
     "plugin",
-    "skeleton"
+    "piwik",
+    "analytics"
   ],
-  "homepage": "http://aurelia.io",
+  "homepage": "https://github.com/Jenselme/aurelia-piwik",
   "bugs": {
-    "url": "https://github.com/aurelia/skeleton-plugin/issues"
+    "url": "https://github.com/Jenselme/aurelia-piwik/issues"
   },
-  "license": "CC0-1.0",
-  "author": "Rob Eisenberg <rob@bluespire.com> (http://robeisenberg.com/)",
+  "license": "MIT",
+  "author": "Julien Enselme <jujens@jujens.eu> (http://www.jujens.eu)",
   "main": "dist/commonjs/index.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/aurelia/skeleton-plugin"
+    "url": "https://github.com/Jenselme/aurelia-piwik"
   },
   "devDependencies": {
     "aurelia-tools": "^0.1.18",
@@ -61,8 +62,16 @@
     "directories": {
       "dist": "dist/amd"
     },
+    "dependencies": {
+      "aurelia-dependency-injection": "^1.0.0-beta.1.2.3",
+      "aurelia-event-aggregator": "^1.0.0-beta.1.2.1"
+    },
     "devDependencies": {
       "aurelia-polyfills": "^1.0.0-beta.1.1.0"
     }
+  },
+  "dependencies": {
+    "aurelia-dependency-injection": "^1.0.0-beta.1.2.3",
+    "aurelia-event-aggregator": "^1.0.0-beta.1.2.1"
   }
 }
