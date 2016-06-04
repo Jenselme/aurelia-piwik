@@ -10,7 +10,7 @@ Feel free to open an issue or PR if this plugin has a bug or is lacking a featur
 
 ## Usage
 
-Install the plugin with `jspm install aurelia-piwik` or `npm install --save aurelia-piwik` and register it in your `main.js`:
+Install the plugin with `jspm install npm:aurelia-piwik` or `npm install --save aurelia-piwik` and register it in your `main.js`:
 
 ```js
 aurelia.use
