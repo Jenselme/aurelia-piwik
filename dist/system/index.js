@@ -1,11 +1,13 @@
 'use strict';
 
-System.register(['aurelia-dependency-injection', 'aurelia-event-aggregator'], function (_export, _context) {
+System.register(['aurelia-logging', 'aurelia-dependency-injection', 'aurelia-event-aggregator'], function (_export, _context) {
     "use strict";
 
-    var Container, EventAggregator;
+    var LogManager, Container, EventAggregator;
     return {
-        setters: [function (_aureliaDependencyInjection) {
+        setters: [function (_aureliaLogging) {
+            LogManager = _aureliaLogging;
+        }, function (_aureliaDependencyInjection) {
             Container = _aureliaDependencyInjection.Container;
         }, function (_aureliaEventAggregator) {
             EventAggregator = _aureliaEventAggregator.EventAggregator;
@@ -15,6 +17,7 @@ System.register(['aurelia-dependency-injection', 'aurelia-event-aggregator'], fu
                 var container = Container.instance;
                 var ea = container.get(EventAggregator);
                 var firstPage = true;
+                var logger = LogManager.getLogger('piwik');
 
                 if (window._paq) {
                     ea.subscribe('router:navigation:success', function () {
@@ -25,7 +28,7 @@ System.register(['aurelia-dependency-injection', 'aurelia-event-aggregator'], fu
                         }
                     });
                 } else {
-                    console.warn('piwik module is loaded but no piwik _paq object was found');
+                    logger.warn('piwik module is loaded but no piwik _paq object was found');
                 }
             }
 

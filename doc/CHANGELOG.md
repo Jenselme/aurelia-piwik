@@ -1,3 +1,9 @@
+### 0.1.3 (2016-08-15)
+
+* chore(package.json): update dependencies to use 1.0.0 aurelia libs
+* ref(index): use aurelia-logging instead of console.log       
+
+
 ### 0.1.2 (2016-06-04)
 
 
